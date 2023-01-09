@@ -22,6 +22,7 @@ const InputForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          handle_add_user(user);
         }}
       >
         <input
@@ -47,12 +48,7 @@ const InputForm = () => {
           }}
           required
         />
-        <Button
-          text="create new user"
-          onClick={() => {
-            handle_add_user(user);
-          }}
-        />
+        <Button text="create new user" />
       </form>
     </section>
   );

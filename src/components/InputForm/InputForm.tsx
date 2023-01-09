@@ -30,6 +30,7 @@ const InputForm = () => {
           onChange={({ target }) => {
             setUser({ ...user, name: target.value });
           }}
+          required
         />
         <input
           type="text"
@@ -37,12 +38,14 @@ const InputForm = () => {
           onChange={({ target }) => {
             setUser({ ...user, age: parseInt(target.value) });
           }}
+          required
         />
         <textarea
           placeholder="Bio"
           onChange={({ target }) => {
             setUser({ ...user, bio: target.value });
           }}
+          required
         />
         <Button
           text="create new user"
